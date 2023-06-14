@@ -1,16 +1,21 @@
 {
   "name": "@lephenix47/interval-utility",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A simpler way to set and clear intervals",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts-cmd": "rmdir /s /q  lib && tsc && tsc --build",
+    "ts-bash": "rm -rf ./ lib && tsc && tsc --build",
     "publish": "npm publish --access=public"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LePhenix47/Interval-utility_npm-package.git"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "keywords": [
     "setInterval",
     "interval"
@@ -20,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/LePhenix47/Interval-utility_npm-package/issues"
   },
-  "homepage": "https://github.com/LePhenix47/Interval-utility_npm-package#readme"
+  "homepage": "https://github.com/LePhenix47/Interval-utility_npm-package#readme",
+  "devDependencies": {
+    "ts-loader": "^9.4.3",
+    "typescript": "^5.1.3"
+  }
 }
